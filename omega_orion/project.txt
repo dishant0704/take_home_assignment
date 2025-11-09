@@ -1,0 +1,12 @@
+Omega Orion:
+============
+Tech Stack:
+Project Setup: vite or Create React App
+Framework: React with TypeScript
+State Managements: Redux
+Data visualization: recharts
+Styling: tailwind CSS
+Icon: free font awesome
+
+Data: 
+use dummy data for chart

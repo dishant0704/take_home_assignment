@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-orange:#F0B30D;
+    --color-blue: #5882EF;
+    --color-purple: #CA66EC;
+    --color-greenGray:#E4F3ED;
+
+    --color-bodyColor: #FBFCFC;
+    --color-primary:#3FB185;
+    --color-secondary:#212121;
+    --color-navTab:#313131;
+    
+    --color-borderColor: #E6E6E6;    
+    --color-sideTitle: #C3C3C3;
+
+    --color-dark-bodyColor: #212121;
+    --color-dark-secondary:#efefef;
+    --color-dark-white: #000000;
+    --color-dark-font: #efefef;
+
+    --color-dark-borderColor: #000000; 
+    --color-dark-inputBg: #3A3A3A; 
+    --color-dark-inputBorder: #000000;
+    --color-dark-listEven: #232323; 
+}
+
+@layer base {
+    button{
+       @apply cursor-pointer text-white py-2 px-6 rounded-full font-semibold text-center bg-primary
+    }
+    input{
+       @apply bg-white border border-borderColor
+    }
+}
+
+@utility modeBtn{
+    @apply absolute z-50 top-7.5
+}
+
+@utility darkInput{
+    @apply bg-dark-inputBg border-dark-inputBorder text-white
+}
+
+@utility dashBgImg {
+   @apply bg-cover bg-right  bg-[url('./assets/images/cardBgImg.png')]
+}
+
+@utility card{
+    @apply bg-white dark:bg-dark-inputBg dark:text-dark-font  p-4 rounded-2xl border border-borderColor dark:border-dark-inputBorder grid gap-6
+}
+
+@utility cardHeader{
+   @apply flex gap-4 text-secondary dark:text-dark-font
+}
+@utility cardHeader-icon{
+    @apply w-8 h-8 rounded-full font-semibold  bg-white border border-borderColor dark:bg-dark-inputBg dark:text-dark-font flex justify-center items-center text-[.8rem] cursor-pointer
+}
+
+@utility cardTabs{
+    @apply grid sm:flex md:flex-wrap sm:gap-4 sm:p-2 bg-white border border-borderColor rounded-full dark:bg-black dark:text-dark-font dark:border-dark-inputBg
+}
+@utility tab {
+    @apply sm:py-3 sm:px-6 rounded-full text-secondary dark:text-dark-font align-middle
+}
+
+@utility active{
+    @apply bg-primary text-white
+}
+
+@utility iConWrapper{
+    @apply w-12 h-12 rounded-full font-semibold  bg-white border border-borderColor flex justify-center items-center text-[1.5rem] dark:bg-dark-inputBg dark:text-dark-font dark:border-dark-inputBorder
+}
+
+@utility toggle-wraper{
+    @apply relative border-r border-borderColor dark:border-black py-4 px-6
+}
+
+@utility notification{
+    @apply w-15 h-15 cursor-pointer dark:text-dark-font text-navTab rounded-full font-semibold dark:bg-dark-inputBg bg-white border dark:border-dark-borderColor border-borderColor flex justify-center items-center text-secondary text-[1.5rem]
+}
+
+@utility proFileWrapper{
+    @apply flex dark:text-white items-center rounded-full p-3 gap-4 inline-flex items-center justify-center dark:bg-dark-inputBg bg-white border dark:border-dark-borderColor border-borderColor
+}
+
+@utility proImg {
+   @apply w-10 h-10 cursor-pointer rounded-full bg-primary text-[1.5rem] flex justify-center items-center text-white
+}
+@utility notification-hover{
+    @apply text-white bg-primary
+}
+
+@utility header {
+    @apply flex-1 p-6 border-b border-borderColor dark:border-black
+}
+
+@utility body {
+    @apply p-6 gap-6 grid
+}
+
+@utility sideHeader{
+    @apply text-sideTitle p-5 font-semibold text-[1.5rem] uppercase
+}
+
+@utility sideNav-btn {
+    @apply dark:bg-dark-bodyColor cursor-pointer dark:text-dark-font text-navTab px-5 py-4 rounded-full font-semibold text-[18px] flex items-center gap-2 border dark:border-dark-bodyColor border-bodyColor 
+}
+
+@utility sideNav-btn-hover {
+    @apply text-primary dark:bg-black bg-white border border-borderColor dark:border-dark-inputBg
+}
+
+@utility sideNav-btn-active {
+    @apply text-primary  bg-white border border-borderColor
+}
+@utility sideFooter{
+    @apply relative
+}
+
+@utility sideFooter-circle{
+    @apply absolute -top-[20px] left-[50%] -translate-x-[50%] w-[40px] h-[40px] rounded-full bg-secondary dark:bg-black z-10 flex items-center justify-center text-white
+}
+@utility sideFooter-container{
+     @apply rounded-xl pt-6 p-4 text-center my-8 bg-white dark:bg-dark-inputBg border border-borderColor dark:border-dark-inputBorder gap-y-6
+}
+
+@utility sideFooter-container-title{
+    @apply text-secondary dark:text-dark-font font-semibold text-center
+}
