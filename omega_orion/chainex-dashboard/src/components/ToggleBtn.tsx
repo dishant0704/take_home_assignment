@@ -11,10 +11,10 @@ checked:boolean
 const ToggleBtn:React.FC<ToggleBtnProps>= ({fun, checked}) => {
   return (
     <div className="toggle-wraper">
-         <FontAwesomeIcon icon={faSun} className='modeBtn left-9 text-white dark:text-dark-font'/>
-         <FontAwesomeIcon icon={faMoon} className='modeBtn left-19 text-secondary dark:text-white'/>
+         <FontAwesomeIcon onClick={fun} icon={faSun} className='modeBtn left-9 text-white dark:text-dark-font cursor-pointer'/>
+         <FontAwesomeIcon onClick={fun} icon={faMoon} className='modeBtn left-19 text-secondary dark:text-white cursor-pointer'/>
           <label className=" inline-flex items-center cursor-pointer">           
-            <input type="checkbox" checked={checked} onClick={fun} className="sr-only peer focus:outline-none m-auto" />                        
+            <input type="checkbox" onClick={fun} checked={checked}  className="sr-only peer focus:outline-none m-auto" />                        
             <div className="relative w-22 h-11            
             bg-white
             border-none 
