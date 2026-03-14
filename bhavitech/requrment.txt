@@ -1,0 +1,12 @@
+Hello
+
+Create a custom hook that manages real-time data fetching and sharing, then use it to power two separate UI components that must stay in sync.
+ 
+You are building a dashboard for a transport company.
+Component A: A dropdown to choose a "Vehicle Group."
+Component B: Displays the "Active Vehicle" and its "Fuel Level."
+The Problem: Both components need access to the same "Vehicle List," but we don't want to fetch the data twice or pass props through 10 layers of components.
+Do not use any State-management Library for this.
+
+#1. filter data;
+#2. setinterval;
