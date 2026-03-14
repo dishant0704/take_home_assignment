@@ -32,6 +32,7 @@ const Dashboard = () => {
         </p>
         <h3 className="py-5">Stack:</h3>
         <ul className=" text-gray-600">
+          <li>vite</li>
           <li>React</li>
           <li>Tailwind CSS</li>
           <li>TypeScript</li>
